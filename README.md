@@ -44,4 +44,4 @@ upstream        git@github.com:pythonprgbr/jlp_pytools.git (push)
    - now we can see that upstream branch appeared in the Pycharm IDLE
 
 ## 7- We can execute a commit with force push when we did no follow the correct branch steps
-   - project jlp_pytools --> GIT --> Commit Directory --> Commit and Push --> 
+   - project jlp_pytools --> GIT --> Commit Directory --> Commit and Push --> Force Push
