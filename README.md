@@ -66,3 +66,33 @@ requirements:
   - Pipfile
   - Pipfile.lock
 ```
+## 9- After we execute a commit and push from local branch to origin remote
+   - github in the origin branch we execute a Pull request to send this modificatipn to upstream
+
+## 10- IDLE Pycharm
+   - master checkout
+   - via gui interface or cli --> git fetch upstream
+   - delete the last branch that was committed
+
+## 11- Create a file .gitignore_global in the home user directory
+   - these files is not going to be available for any commit to remotes branches
+``` 
+~ $ more .gitignore_global 
+Pycharm files
+.idea/
+.classpath
+.project
+.settings/
+bin/
+*.sqlite3 
+```
+## 11- to set the file .gitignore_global correctly
+   - ~ $ git config --global core.excludesfiles .gitignore_global
+```
+~ $ git config -l
+user.name=61246880
+user.email=jorge.plautz@gmail.com
+core.excludesfile=/home/plautz/.gitignore_global
+core.autocrlf=input
+cola.spellcheck=false
+```
