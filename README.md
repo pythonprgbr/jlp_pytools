@@ -4,17 +4,22 @@ This project is based on Python Pro module pytools
 A ideia neste projeto é fazer um projeto iniciando do zero com fork de um instituição 
 no github para uma conta pessoal depois o clone para IDLE Pycharm
 
-## 1- Commit action after README file modification
+[![Updates](https://pyup.io/repos/github/pythonprgbr/jlp_pytools/shield.svg)](https://pyup.io/repos/github/pythonprgbr/jlp_pytools/)
+[![Python 3](https://pyup.io/repos/github/pythonprgbr/jlp_pytools/python-3-shield.svg)](https://pyup.io/repos/github/pythonprgbr/jlp_pytools/)
+![Python package](https://github.com/pythonprgbr/jlp_pytools/workflows/Python%20package/badge.svg?branch=master)
+
+
+### 1- Commit action after README file modification
    - in the personal github account a second commit is going to be created
      - Commit for file README modification
      - Initial commit
 
-## 2- Pull requests can be created in the github personal account
+### 2- Pull requests can be created in the github personal account
    - just to send this modification to original file jlplautz/jlp_pytools -> pythonprgbr/jlp_pytools
 
 ![](static/images/pullrequest1.png)
 
-## 3- We can verify the branch that we have created
+### 3- We can verify the branch that we have created
 ```
 Comandos úteis:
     git branch : lista todas branches locais
@@ -28,10 +33,10 @@ Comandos úteis:
     git checkout <nome-da-branch>: carrega os arquivos de uma branch especifica
 ```
 
-## 4- We can send the local branch to remote via CMD
+### 4- We can send the local branch to remote via CMD
    - git push origin master  -> send the local master branch to remote origin
 
-## 5- We need to create upstream remote
+### 5- We need to create upstream remote
    - git remote add upstream git@github.com:pythonprgbr/jlp_pytools.git
 ```
 jlp_pytools $ git remote -v
@@ -41,15 +46,15 @@ upstream        git@github.com:pythonprgbr/jlp_pytools.git (fetch)
 upstream        git@github.com:pythonprgbr/jlp_pytools.git (push)
 ```
 
-## 6-  we can have this modification available in our local branch in Pycharm IDLE
+### 6-  we can have this modification available in our local branch in Pycharm IDLE
    - project jlp_pytools --> GIT --> Fetch --> the information comes from remotes branch to update the local one.
    - now we can see that upstream branch appeared in the Pycharm IDLE
 
-## 7- We can execute a commit with force push when we did no follow the correct branch steps
+### 7- We can execute a commit with force push when we did no follow the correct branch steps
    - project jlp_pytools --> GIT --> Commit Directory --> Commit and Push --> Force Push
    - jlp_pytools $ git push origin master -f  --> (-f force)
 
-## 8- Create a virtual environment
+### 8- Create a virtual environment
    - jlp_pytools $ pyenv local 3.8.1
    - jlp_pytools $ pipenv shell
    - (jlp_pytools) jlp_pytools $ pipenv install flake8 --dev
@@ -66,15 +71,15 @@ requirements:
   - Pipfile
   - Pipfile.lock
 ```
-## 9- After we execute a commit and push from local branch to origin remote
+### 9- After we execute a commit and push from local branch to origin remote
    - github in the origin branch we execute a Pull request to send this modificatipn to upstream
 
-## 10- IDLE Pycharm
+### 10- IDLE Pycharm
    - master checkout
    - via gui interface or cli --> git fetch upstream
    - delete the last branch that was committed
 
-## 11- Create a file .gitignore_global in the home user directory
+### 11- Create a file .gitignore_global in the home user directory
    - these files is not going to be available for any commit to remotes branches
 ``` 
 ~ $ more .gitignore_global 
@@ -86,7 +91,7 @@ Pycharm files
 bin/
 *.sqlite3 
 ```
-## 12- to set the file .gitignore_global correctly
+### 12- to set the file .gitignore_global correctly
    - ~ $ git config --global core.excludesfiles .gitignore_global
 ```
 ~ $ git config -l
@@ -97,7 +102,7 @@ core.autocrlf=input
 cola.spellcheck=false
 ```
 
-## 13- procedure to create a virtual environment Ubuntu
+### 13- procedure to create a virtual environment Ubuntu
    - libs installation:
 ```
 sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm gettext libncurses5-dev tk-dev tcl-dev blt-dev libgdbm-dev git python-dev python3-dev aria2 vim libnss3-tools python3-venv liblzma-dev
@@ -138,7 +143,7 @@ pyenv global <versao>
    - to verify python version  --> python2 -V  -> Python 2.7.17
    - to verify python version  --> python3 -V  -> Python 3.8.1
 
-## 13- How can we create a virtual environment Ubuntu
+### 14- How can we create a virtual environment Ubuntu
    - create a project directory and inside --> python3 -m venv .venv  
    - meaning (-m -> module called venv)  (.venv -> directory where is the virtual environment)
    - to activate the virtual environment -> source .venv/bin/activate
@@ -147,6 +152,11 @@ pyenv global <versao>
    - to install virtualenv for python2 -> python2 -m pip install virtualenv
    - to install virtualenv for python2 -> python2 -m virtualenv .venv2
 
-## 14- How can we create a virtual environment Pycharm
+### 15- How can we create a virtual environment Pycharm
    - file / settings / Python interpreter / add / verify the project directory
    - directory venv is always created inside of the project directory
+
+### 16- Create automatic dependency upgrade via pyup
+   - It is necessary to create a file .pyup.yml -> See item 8
+   - https://pyup.io/ -> create account 
+   - https://pyup.io/account/repos/add/ --> add your project 
