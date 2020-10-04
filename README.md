@@ -96,3 +96,44 @@ core.excludesfile=/home/plautz/.gitignore_global
 core.autocrlf=input
 cola.spellcheck=false
 ```
+
+## 12- procedure to create a virtual environment Ubuntu
+   - libs installation:
+```
+sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm gettext libncurses5-dev tk-dev tcl-dev blt-dev libgdbm-dev git python-dev python3-dev aria2 vim libnss3-tools python3-venv liblzma-dev
+```
+   - pyenv installation:
+```
+curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+```
+   - .bashrc file :
+```
+export PIPENV_VENV_IN_PROJECT=1
+export PIPENV_NO_INHERIT=1
+export PYENV_ROOT=~/.pyenv 
+PATH="${PYENV_ROOT}/shims:${PYENV_ROOT}/bin/:${PATH}"
+eval "$(pyenv init -)"
+alias mng='python $VIRTUAL_ENV/../manage.py'
+```
+   - python version installation:
+```
+pyenv install <versao>
+```
+   - python global setting:
+```
+pyenv global <versao>
+```
+   - To verify the python version available -> pyenv install -l
+   - to install python version --> pyenv install 3.8.1
+   - to verify python version available --> pyenv versions
+```
+(jlp_pytools) jlp_pytools $ pyenv versions
+  system
+  3.8.0
+* 3.8.1 (set by PYENV_VERSION environment variable)
+```
+
+   - to setting python version global --> pyenv global 3.8.0
+   - to setting python version local --> pyenv local 3.8.1
+   - to verify python version  --> python2 -V  -> Python 2.7.17
+   - to verify python version  --> python3 -V  -> Python 3.8.1
