@@ -150,4 +150,3 @@ pyenv global <versao>
 ## 14- How can we create a virtual environment Pycharm
    - file / settings / Python interpreter / add / verify the project directory
    - directory venv is always created inside of the project directory
-
