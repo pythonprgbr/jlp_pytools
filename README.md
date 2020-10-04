@@ -86,7 +86,7 @@ Pycharm files
 bin/
 *.sqlite3 
 ```
-## 11- to set the file .gitignore_global correctly
+## 12- to set the file .gitignore_global correctly
    - ~ $ git config --global core.excludesfiles .gitignore_global
 ```
 ~ $ git config -l
@@ -97,7 +97,7 @@ core.autocrlf=input
 cola.spellcheck=false
 ```
 
-## 12- procedure to create a virtual environment Ubuntu
+## 13- procedure to create a virtual environment Ubuntu
    - libs installation:
 ```
 sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm gettext libncurses5-dev tk-dev tcl-dev blt-dev libgdbm-dev git python-dev python3-dev aria2 vim libnss3-tools python3-venv liblzma-dev
