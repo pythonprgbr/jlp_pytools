@@ -137,3 +137,17 @@ pyenv global <versao>
    - to setting python version local --> pyenv local 3.8.1
    - to verify python version  --> python2 -V  -> Python 2.7.17
    - to verify python version  --> python3 -V  -> Python 3.8.1
+
+## 13- How can we create a virtual environment Ubuntu
+   - create a project directory and inside --> python3 -m venv .venv  
+   - meaning (-m -> module called venv)  (.venv -> directory where is the virtual environment)
+   - to activate the virtual environment -> source .venv/bin/activate
+   - to verify from where the python running -> which python
+   - to deactivate the virtual environment -> deactivate
+   - to install virtualenv for python2 -> python2 -m pip install virtualenv
+   - to install virtualenv for python2 -> python2 -m virtualenv .venv2
+
+## 14- How can we create a virtual environment Pycharm
+   - file / settings / Python interpreter / add / verify the project directory
+   - directory venv is always created inside of the project directory
+
