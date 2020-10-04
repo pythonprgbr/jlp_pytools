@@ -91,7 +91,8 @@ Pycharm files
 bin/
 *.sqlite3 
 ```
-### 12- to set the file .gitignore_global correctly
+
+## 12- to set the file .gitignore_global correctly
    - ~ $ git config --global core.excludesfiles .gitignore_global
 ```
 ~ $ git config -l
@@ -102,7 +103,7 @@ core.autocrlf=input
 cola.spellcheck=false
 ```
 
-### 13- procedure to create a virtual environment Ubuntu
+## 13- procedure to create a virtual environment Ubuntu
    - libs installation:
 ```
 sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm gettext libncurses5-dev tk-dev tcl-dev blt-dev libgdbm-dev git python-dev python3-dev aria2 vim libnss3-tools python3-venv liblzma-dev
@@ -143,7 +144,8 @@ pyenv global <versao>
    - to verify python version  --> python2 -V  -> Python 2.7.17
    - to verify python version  --> python3 -V  -> Python 3.8.1
 
-### 14- How can we create a virtual environment Ubuntu
+
+## 14- How can we create a virtual environment Ubuntu
    - create a project directory and inside --> python3 -m venv .venv  
    - meaning (-m -> module called venv)  (.venv -> directory where is the virtual environment)
    - to activate the virtual environment -> source .venv/bin/activate
@@ -151,6 +153,7 @@ pyenv global <versao>
    - to deactivate the virtual environment -> deactivate
    - to install virtualenv for python2 -> python2 -m pip install virtualenv
    - to install virtualenv for python2 -> python2 -m virtualenv .venv2
+
 
 ### 15- How can we create a virtual environment Pycharm
    - file / settings / Python interpreter / add / verify the project directory
@@ -160,3 +163,4 @@ pyenv global <versao>
    - It is necessary to create a file .pyup.yml -> See item 8
    - https://pyup.io/ -> create account 
    - https://pyup.io/account/repos/add/ --> add your project 
+
