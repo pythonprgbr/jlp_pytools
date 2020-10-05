@@ -159,3 +159,7 @@ pyenv global <versao>
    - It is necessary to create a file .pyup.yml -> See item 8
    - https://pyup.io/ -> create account 
    - https://pyup.io/account/repos/add/ --> add your project 
+
+### 17- Install lib pytest parameter --dev
+   - (jlp_pytools) jlp_pytools $ pipenv install pytest --dev
+   - File | Settings | Tools | Python Integrated Tools --> Default test runner = pytest
