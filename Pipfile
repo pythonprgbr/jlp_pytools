@@ -4,9 +4,10 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+flake8 = "*"
+pytest = "*"
 
 [packages]
-flake8 = "==3.8.4"
 mccabe = "==0.6.1"
 pycodestyle = "==2.6.0"
 pyflakes = "==2.2.0"
