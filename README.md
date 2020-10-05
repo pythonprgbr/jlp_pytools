@@ -7,6 +7,7 @@ no github para uma conta pessoal depois o clone para IDLE Pycharm
 ![Python package](https://github.com/pythonprgbr/jlp_pytools/workflows/Python%20package/badge.svg?event=status)
 [![Updates](https://pyup.io/repos/github/pythonprgbr/jlp_pytools/shield.svg)](https://pyup.io/repos/github/pythonprgbr/jlp_pytools/)
 [![Python 3](https://pyup.io/repos/github/pythonprgbr/jlp_pytools/python-3-shield.svg)](https://pyup.io/repos/github/pythonprgbr/jlp_pytools/)
+[![codecov](https://codecov.io/gh/jlplautz/jlp_pytools/branch/master/graph/badge.svg?token=FGLF7EDYR4)](undefined)
 
 ### 1- Commit action after README file modification
    - in the personal github account a second commit is going to be created
@@ -163,3 +164,14 @@ pyenv global <versao>
 ### 17- Install lib pytest parameter --dev
    - (jlp_pytools) jlp_pytools $ pipenv install pytest --dev
    - File | Settings | Tools | Python Integrated Tools --> Default test runner = pytest
+
+### 18- Install lib pytest-cov --dev
+   - (jlp_pytools) jlp_pytools $ pipenv install pytest-cov --dev
+   - https://codecov.io/gh  -> add directory -> jlp_pytools
+   - copy Upload Token from codecov.io
+   - Insert token in the file python_app.yml (workflows github action)
+   - github create a Webhooks 
+   - git actions install lib codecov --> python -m pip install --upgrade pip codecov
+
+![](static/images/webhooks.png)
+

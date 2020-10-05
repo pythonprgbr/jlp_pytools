@@ -25,7 +25,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
+        python -m pip install --upgrade pip codecov
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
@@ -37,3 +37,9 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+    - name: Posting Coverage
+      working-directory: tests
+      env:
+        CODECOV_TOKEN: "7958292c-01c5-4392-b47c-2f608d2e0f47"
+      run: |
+        pipenv run codecov
