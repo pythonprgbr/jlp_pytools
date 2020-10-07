@@ -40,6 +40,6 @@ jobs:
     - name: Posting Coverage
       working-directory: tests
       env:
-        CODECOV_TOKEN: "7958292c-01c5-4392-b47c-2f608d2e0f47"
+        CODECOV_TOKEN: "8ffacf64-9e35-4c13-bc19-39d07676d0ce"
       run: |
-        pytest --cov=tests --cov-report=html
+        pytest --cov=tests --cov-report=xml
