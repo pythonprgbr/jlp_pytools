@@ -4,8 +4,7 @@ This project is based on Python Pro module pytools
 A ideia neste projeto é fazer um projeto iniciando do zero com fork de um instituição 
 no github para uma conta pessoal depois o clone para IDLE Pycharm
 
-Test Driven Development 
-![Python package](https://github.com/pythonprgbr/jlp_pytools/workflows/Python%20package/badge.svg?event=status)
+![Python package](https://github.com/jlplautz/jlp_pytools/workflows/Python%20package/badge.svg)
 [![Updates](https://pyup.io/repos/github/pythonprgbr/jlp_pytools/shield.svg)](https://pyup.io/repos/github/pythonprgbr/jlp_pytools/)
 [![Python 3](https://pyup.io/repos/github/pythonprgbr/jlp_pytools/python-3-shield.svg)](https://pyup.io/repos/github/pythonprgbr/jlp_pytools/)
 [![codecov](https://codecov.io/gh/pythonprgbr/jlp_pytools/branch/master/graph/badge.svg)](https://codecov.io/gh/pythonprgbr/jlp_pytools)
@@ -178,4 +177,27 @@ pyenv global <versao>
 
 ### 19- TDD Test Driven Development
    - Create a python package -> spam  and test_spam
-   - 
+   
+### 20- Create a test to verify the email account is correct
+```
+def test_invalid_sender(receiver):
+    sending = Sending()
+    # here we have a context manager and the code inside of this context
+    # is going to generate a exception
+    with pytest.raises(InvalidEmail):
+        sending.send(
+            receiver,
+            'contato@luchtransportes.com',
+            'Curso Python',
+            'Turma de primeira',
+        )
+        
+class Sending(object):
+    def send(self, receiver, sender, subject, body):
+        if '@' not in receiver:
+            raise InvalidEmail(f'Email from sender account is not valid: {receiver}')
+        return receiver
+
+class InvalidEmail(Exception):
+    pass
+```
