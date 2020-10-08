@@ -43,4 +43,4 @@ jobs:
       env:
         CODECOV_TOKEN: "8ffacf64-9e35-4c13-bc19-39d07676d0ce"
       run: |
-        pytest -svv --cov=tests
+        pipenv run codecov -t "8ffacf64-9e35-4c13-bc19-39d07676d0ce"

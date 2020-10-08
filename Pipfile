@@ -12,6 +12,7 @@ pytest-cov = "*"
 mccabe = "==0.6.1"
 pycodestyle = "==2.6.0"
 pyflakes = "==2.2.0"
+codecov = "*"
 
 [requires]
 python_version = "3.8"
