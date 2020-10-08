@@ -201,3 +201,41 @@ class Sending(object):
 class InvalidEmail(Exception):
     pass
 ```
+
+### 21- BD Testing 
+   - Start creating a test_users.py
+```
+def test_users():
+    # to connect to BD is necessary a connection
+    # connection is responsible for the authentication (login and password)
+    connection = Connection()
+    # when we have a connection we can start a session
+    # throught session we can make the BD operation
+    session = connection.create_session()
+
+    # creating the simple Model and via session we can save it
+    user = User(name='Plautz')
+    session.save(user)
+
+    # It is necessary to assert if the user was created and we need to verify
+    # if this user has an attribute and this attribute is one instance type integer
+    assert isinstance(user.id, int)
+
+    session.roll_back()
+    session.close()
+    connection.close()
+```
+   - run test step by step and the classes were created
+   - Selecting Connection and pressing F6 we moved the class Connection and Session to spam/db.py
+   - selecting User and pressing F6 we moved class user to models.py
+   - implemented roll_back method -> to clean the session and the users list
+
+### 21- Fixtures
+    - the BD connection has two steps
+      - setup 
+          - connection = Connection()
+          - session = connection.create_session()
+      - tear-down
+          - session.roll_back()
+          - ession.close()
+    - we extract method connection = Connection() from test_user_save() by CRTL+ALT+M 
