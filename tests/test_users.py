@@ -4,7 +4,7 @@ from spam.db import Connection
 from spam.models import User
 
 
-@pytest.fixture
+@pytest.fixture(scope='session')
 def connection():
     # to connect to BD is necessary a connection
     # connection is responsible for the authentication (login and password)
