@@ -1,6 +1,10 @@
+from time import sleep
+
+
 class Session:
     contador = 0
     users = []
+
     def save(self, user):
         Session.contador += 1
         user.id = Session.contador
@@ -17,7 +21,10 @@ class Session:
         pass
 
 
-class Connection():
+class Connection:
+    def __init__(self):
+        sleep(0.1)
+
     def create_session(self):
         return Session()
 

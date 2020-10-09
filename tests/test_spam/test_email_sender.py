@@ -5,16 +5,15 @@ import pytest
 def test_email_sending():
     """"
     We are going to create a simple test
-    The email sending is going to be a class
-    to create this class we can selecting Sending() and pressing ALT+ENTER
-    then we need to move the Class Sending to spam directory
+    The email sending is going to be a class to create this class we can selecting Sending()
+    and pressing ALT+ENTER then we need to move the Class Sending to spam directory
     to create method we can selecting it and pressing ALT+ENTER
     """
     sending = Sending()
     assert sending is not None
 
 
-# parametrize the first element is the  receiver then a  list of receivers
+# parametrize the first element is the receiver then a list of receivers
 @pytest.mark.parametrize(
     'receiver',
     ['jorge.plautz@gmail.com', 'jorgeluiz.plautz@carritech.com']
@@ -30,7 +29,7 @@ def test_sender(receiver):
     assert receiver in result
 
 
-# test to check if email account is correct
+# test to check if email account is correct ex: one email empty and other missing @
 @pytest.mark.parametrize(
     'receiver',
     ['', 'jorgeluiz']

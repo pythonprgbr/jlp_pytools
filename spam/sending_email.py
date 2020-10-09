@@ -1,4 +1,4 @@
-class Sending(object):
+class Sending():
     def send(self, receiver, sender, subject, body):
         if '@' not in receiver:
             raise InvalidEmail(f'Email from sender account is not valid: {receiver}')

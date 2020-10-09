@@ -230,7 +230,7 @@ def test_users():
    - selecting User and pressing F6 we moved class user to models.py
    - implemented roll_back method -> to clean the session and the users list
 
-### 21- Fixtures
+### 22- Fixtures
     - the BD connection has two steps
       - setup 
           - connection = Connection()
@@ -239,3 +239,43 @@ def test_users():
           - session.roll_back()
           - ession.close()
     - we extract method connection = Connection() from test_user_save() by CRTL+ALT+M 
+    - we extract method connection = Connection() from test_user_save() by CRTL+ALT+M 
+```
+@pytest.fixture
+def connection():
+    # Setuo fase
+    connection_obj = Connection()
+    yield connection_obj
+    # Tear-down
+    connection_obj.close()
+
+@pytest.fixture
+def session(connection):
+    session_obj = connection.create_session()
+    yield session_obj
+    session_obj.roll_back()
+    session_obj.close()
+
+def test_user_save(connection, session):
+    user = User(name='Plautz')
+    session.save(user)
+    assert isinstance(user.id, int)
+
+
+def test_users_list(connection, session):
+    users = [User(name='Plautz'), User(name='Linda')]
+    for user in users:
+        session.save(user)
+
+    assert users == session.list()
+```
+
+### 23- Important point
+    - It was missing the lib codecov
+    - (jlp_pytools) jlp_pytools $ pipenv install codecov
+    - After installed this lib the connection to codecov.io was possible.
+
+
+    - @pytest.fixture(scope='function') -> default scope
+    - @pytest.fixture(scope='module') -> runs just once
+    - @pytest.fixture(scope='session') -> runs just once during the session test
