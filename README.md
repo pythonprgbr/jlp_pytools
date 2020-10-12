@@ -279,3 +279,14 @@ def test_users_list(connection, session):
     - @pytest.fixture(scope='function') -> default scope
     - @pytest.fixture(scope='module') -> runs just once
     - @pytest.fixture(scope='session') -> runs just once during the session test
+
+### 24- Correction of github workflow action
+    - lib codecov was installed
+```
+    - name: Posting Coverage
+      working-directory: tests
+      env:
+        CODECOV_TOKEN: "8ffacf64-9e35-4c13-bc19-39d07676d0ce"
+      run: |
+        pipenv run codecov
+```
