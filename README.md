@@ -283,10 +283,9 @@ def test_users_list(connection, session):
 ### 24- Correction of github workflow action
     - lib codecov was installed
 ```
-    - name: Posting Coverage
-      working-directory: tests
-      env:
-        CODECOV_TOKEN: "8ffacf64-9e35-4c13-bc19-39d07676d0ce"
-      run: |
-        pipenv run codecov
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        token: 8ffacf64-9e35-4c13-bc19-39d07676d0ce
 ```
+![](static/images/codecov_result.png)
