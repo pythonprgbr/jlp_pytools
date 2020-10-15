@@ -5,7 +5,7 @@ codecov==2.1.10
 coverage==5.3
 flake8==3.8.4
 idna==2.10
-iniconfig==1.0.1
+iniconfig==1.1.1
 mccabe==0.6.1
 packaging==20.4
 pluggy==0.13.1
